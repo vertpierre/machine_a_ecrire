@@ -1,0 +1,265 @@
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  --panel-width: 22vw;
+  --safe-zone-width: 78vw;
+  --space-v: 0.8vh;
+  --space-button-pad: 0.8vh;
+  --space-button-pad-hover: 1.6vh;
+  --font-size-ui: 2vh;
+  --line-height-ui: 2.8vh;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body {
+  font-family: "Inter";
+  font-weight: 300;
+  overflow: hidden;
+  position: relative;
+}
+
+.glyph-source,
+.glyph-export-preview,
+.glyph-hit-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glyph-source {
+  display: block;
+  background-color: hsl(0, 0%, 80%);
+  background-image:
+    linear-gradient(45deg, hsl(0, 0%, 78%) 25%, transparent 25%),
+    linear-gradient(-45deg, hsl(0, 0%, 78%) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, hsl(0, 0%, 78%) 75%),
+    linear-gradient(-45deg, transparent 75%, hsl(0, 0%, 78%) 75%);
+  background-size: 12px 12px;
+  background-position:
+    0 0,
+    0 6px,
+    6px -6px,
+    -6px 0px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glyph-export-preview {
+  display: none;
+}
+
+.glyph-hit-canvas {
+  width: 100%;
+  pointer-events: none;
+  z-index: 30;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.global_glyphe {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.export-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--safe-zone-width) - var(--space-v));
+  height: calc(var(--safe-zone-height) - var(--space-v));
+  outline: 1px dashed hsl(0, 0%, 0%);
+  pointer-events: none;
+  box-sizing: border-box;
+  z-index: 4;
+  margin: calc(0.5 * var(--space-v));
+}
+
+.global_range {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: max-content;
+  max-width: calc(100vw - (2 * var(--space-v)));
+  padding: var(--space-v);
+  display: grid;
+  grid-template-columns: 10rem 22rem 10rem;
+  grid-template-areas: "reload modify save";
+  align-items: center;
+  justify-items: center;
+  gap: calc(2 * var(--space-v));
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.shape-hit {
+  cursor: move;
+  touch-action: none;
+  pointer-events: all;
+}
+
+.shape-hit:hover {
+  cursor: move;
+}
+
+.shape-hitbox {
+  fill: transparent;
+}
+
+button {
+  margin: 0;
+  background-color: hsla(0, 0%, 80%, 0.1);
+  border: 1px solid hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 0%);
+  backdrop-filter: blur(8px);
+}
+
+button,
+.modify {
+  pointer-events: auto;
+}
+
+button:hover,
+button:focus {
+  outline: 1px solid rgb(0, 0, 0);
+}
+
+button,
+p {
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 300;
+  font-size: var(--font-size-ui);
+  line-height: var(--line-height-ui);
+  padding: var(--space-button-pad);
+}
+
+#reload,
+#save-jpeg {
+  width: 10rem;
+  min-width: 10rem;
+  box-sizing: border-box;
+}
+
+#reload {
+  grid-area: reload;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-button-pad);
+  white-space: nowrap;
+}
+
+#save-jpeg {
+  grid-area: save;
+}
+
+#reload > span {
+  display: inline-block;
+  transform: translateX(calc(var(--space-button-pad) * -0.5));
+}
+
+#reload:hover > span {
+  transform: translateX(0);
+}
+
+.modify {
+  grid-area: modify;
+  display: flex;
+  width: 22rem;
+  gap: var(--space-v);
+}
+
+.button-modify {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.button-modify:hover,
+.button-modify:active,
+.button-modify:focus {
+  flex: 1.2 1.2 0;
+  min-width: 0;
+}
+
+.button-modify[aria-pressed="true"] {
+  outline: 2px solid rgb(0, 0, 0);
+  outline-offset: -2px;
+}
+
+.blur-icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+
+.blur-icon-rounded {
+  border-radius: 0.28rem;
+}
+
+.blur-icon-round {
+  border-radius: 999px;
+}
+
+#bold {
+  font-weight: 500;
+}
+
+#thin {
+  font-weight: 100;
+}
+
+#bold:hover,
+#regular:hover,
+#thin:hover,
+#sharp:hover,
+#medium:hover,
+#smooth:hover {
+  padding: 0 var(--space-button-pad-hover);
+}
+
+#reload > span,
+.modify button {
+  transition:
+    transform 0.3s ease,
+    flex 0.3s ease,
+    padding 0.3s ease;
+}
+
+p {
+  pointer-events: none;
+}
+
+@media (max-width: 40rem) {
+  .global_range {
+    width: auto;
+    grid-template-columns: 10rem 10rem;
+    grid-template-areas:
+      "modify modify"
+      "reload save";
+    justify-items: center;
+  }
+}

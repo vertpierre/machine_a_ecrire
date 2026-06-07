@@ -1,151 +1,151 @@
 @import url("https://rsms.me/inter/inter.css");
 html {
-	font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 @supports (font-variation-settings: normal) {
-	html {
-		font-family: "Inter var", sans-serif;
-	}
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }
 
 body {
-	font-family: "Inter";
-	font-weight: 300;
-	overflow: hidden;
-	display: flex;
+  font-family: "Inter";
+  font-weight: 300;
+  overflow: hidden;
+  display: flex;
 }
 
 path:hover,
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .global_glyphe {
-	width: 80vw;
-	height: 100vh;
+  width: 80vw;
+  height: 100vh;
 }
 
 .global_range {
-	width: 20vw;
-	height: 100vh;
-	padding: 1vh;
-	background-color: rgb(230, 230, 230);
-	display: flex;
-	flex-direction: column;
+  width: 20vw;
+  height: 100vh;
+  padding: 1vh;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
 }
 
 .composition_contrast {
-	background-color: rgb(255, 255, 255);
-	width: 100%;
-	height: 100%;
-	filter: contrast(5000%);
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  filter: contrast(5000%);
 }
 
 .composition_blur {
-	width: 100%;
-	height: 100%;
-	filter: blur(8px);
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
 }
 
 .global {
-	padding: 2vh 4vh;
+  padding: 2vh 4vh;
 }
 
 .draggable {
-	z-index: 10;
+  z-index: 10;
 }
 
 .shape {
-	margin: 1vh;
-	display: inline-block;
-	vertical-align: top;
+  margin: 1vh;
+  display: inline-block;
+  vertical-align: top;
 }
 
 path {
-	fill: none;
-	stroke-width: 10px;
-	stroke: rgb(0, 0, 0);
+  fill: none;
+  stroke-width: 10px;
+  stroke: rgb(0, 0, 0);
 }
 
 #shape_01 {
-	width: 37.5px;
-	height: 187.5px;
+  width: 37.5px;
+  height: 187.5px;
 }
 
 #shape_02 {
-	width: 150px;
-	height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 #shape_03 {
-	width: 37.5px;
-	height: 375px;
+  width: 37.5px;
+  height: 375px;
 }
 
 #shape_04 {
-	width: 150px;
-	height: 37.5px;
+  width: 150px;
+  height: 37.5px;
 }
 
 #shape_05 {
-	width: 150px;
-	height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 #shape_06 {
-	width: 150px;
-	height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 #shape_07 {
-	width: 112.5px;
-	height: 150px;
+  width: 112.5px;
+  height: 150px;
 }
 
 button,
 #box_useless {
-	margin: 1vh;
-	background-color: rgba(0, 0, 0, 0);
-	border: 1px solid rgb(0, 0, 0);
-	color: rgb(0, 0, 0);
+  margin: 1vh;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 button:focus {
-	outline: none;
+  outline: none;
 }
 
 button,
 p {
-	text-align: center;
-	font-family: "Inter";
-	font-weight: 300;
-	font-size: 1vw;
-	line-height: 3vh;
-	padding: 1vh;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 300;
+  font-size: 1vw;
+  line-height: 3vh;
+  padding: 1vh;
 }
 
 button > span {
-	padding-right: 1vh;
+  padding-right: 1vh;
 }
 
 button:hover > span {
-	padding-right: 0.2vh;
+  padding-right: 0.2vh;
 }
 
 .modify {
-	display: flex;
+  display: flex;
 }
 
 .button-modify {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 #bold {
-	font-weight: 500;
+  font-weight: 500;
 }
 
 #thin {
-	font-weight: 100;
+  font-weight: 100;
 }
 
 #bold:hover,
@@ -153,18 +153,18 @@ button:hover > span {
 #thin:hover,
 #sharp:hover,
 #smooth:hover {
-	padding: 0 1.5vh;
+  padding: 0 1.5vh;
 }
 
 button > span,
 .modify button {
-	transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 #box_useless {
-	height: 74%;
+  height: 74%;
 }
 
 p {
-	pointer-events: none;
+  pointer-events: none;
 }

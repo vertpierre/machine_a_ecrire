@@ -1,67 +1,67 @@
 {
-	"name": "typo-app",
-	"productName": "Normographe_Pierre_Roussel",
-	"version": "1.0.0",
-	"description": "Normographe numérique",
-	"main": "src/index.js",
-	"scripts": {
-		"start": "electron-forge start",
-		"package": "electron-forge package",
-		"package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/icons/mac/icon.icns --prune=true --out=release-builds",
-		"package-win": "electron-packager . typo-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Typo App\"",
-		"package-linux": "electron-packager . typo-app --overwrite --asar=true --platform=linux --arch=x64 --icon=src/icons/png/icon.png --prune=true --out=release-builds",
-		"make": "electron-forge make",
-		"publish": "electron-forge publish",
-		"lint": "echo \"No linting configured\""
-	},
-	"keywords": [],
-	"author": {
-		"name": "Pierre Roussel",
-		"email": "pierre.roussel24@gmail.com"
-	},
-	"license": "MIT",
-	"config": {
-		"forge": {
-			"packagerConfig": {
-				"icon": "src/icons/mac/icon.icns"
-			},
-			"makers": [
-				{
-					"name": "@electron-forge/maker-squirrel",
-					"config": {
-						"name": "typo_app"
-					}
-				},
-				{
-					"name": "@electron-forge/maker-zip",
-					"platforms": [
-						"darwin"
-					]
-				},
-				{
-					"name": "@electron-forge/maker-deb",
-					"config": {
-						"name": "typo_app"
-					}
-				},
-				{
-					"name": "@electron-forge/maker-rpm",
-					"config": {
-						"name": "typo_app"
-					}
-				}
-			]
-		}
-	},
-	"dependencies": {
-		"electron-squirrel-startup": "^1.0.0"
-	},
-	"devDependencies": {
-		"@electron-forge/cli": "^6.0.0-beta.54",
-		"@electron-forge/maker-deb": "^6.0.0-beta.54",
-		"@electron-forge/maker-rpm": "^6.0.0-beta.54",
-		"@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-		"@electron-forge/maker-zip": "^6.0.0-beta.54",
-		"electron": "11.0.4"
-	}
+  "name": "typo-app",
+  "productName": "Normographe_Pierre_Roussel",
+  "version": "1.0.0",
+  "description": "Normographe numérique",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . typo-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Typo App\"",
+    "package-linux": "electron-packager . typo-app --overwrite --asar=true --platform=linux --arch=x64 --icon=src/icons/png/icon.png --prune=true --out=release-builds",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Pierre Roussel",
+    "email": "pierre.roussel24@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "src/icons/mac/icon.icns"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "typo_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "name": "typo_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {
+            "name": "typo_app"
+          }
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "11.0.4"
+  }
 }
